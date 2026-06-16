@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-2.0-only
-// SPDX-FileCopyrightText: Copyright (c) 2023, NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+// SPDX-FileCopyrightText: Copyright (c) 2023-2026, NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
 
 #include <dt-bindings/thermal/thermal.h>
 
@@ -17,7 +17,15 @@
 			#cooling-cells = <2>;
 		};
 
+		cpu@100 {
+			#cooling-cells = <2>;
+		};
+
 		cpu@200 {
+			#cooling-cells = <2>;
+		};
+
+		cpu@300 {
 			#cooling-cells = <2>;
 		};
 
@@ -25,7 +33,15 @@
 			#cooling-cells = <2>;
 		};
 
+		cpu@10100 {
+			#cooling-cells = <2>;
+		};
+
 		cpu@10200 {
+			#cooling-cells = <2>;
+		};
+
+		cpu@10300 {
 			#cooling-cells = <2>;
 		};
 
@@ -33,7 +49,15 @@
 			#cooling-cells = <2>;
 		};
 
+		cpu@20100 {
+			#cooling-cells = <2>;
+		};
+
 		cpu@20200 {
+			#cooling-cells = <2>;
+		};
+
+		cpu@20300 {
 			#cooling-cells = <2>;
 		};
 	};
@@ -52,11 +76,17 @@
 				map-cpufreq {
 					trip = <&cpu_sw_slowdown>;
 					cooling-device = <&cpu0_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu0_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu0_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu0_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu1_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu1_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu1_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu1_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu2_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
-							 <&cpu2_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
+							 <&cpu2_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu2_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu2_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
 				};
 
 				map-devfreq {
@@ -79,11 +109,17 @@
 				map-cpufreq {
 					trip = <&gpu_sw_slowdown>;
 					cooling-device = <&cpu0_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu0_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu0_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu0_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu1_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu1_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu1_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu1_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu2_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
-							 <&cpu2_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
+							 <&cpu2_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu2_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu2_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
 				};
 
 				map-devfreq {
@@ -106,11 +142,17 @@
 				map-cpufreq {
 					trip = <&cv0_sw_slowdown>;
 					cooling-device = <&cpu0_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu0_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu0_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu0_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu1_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu1_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu1_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu1_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu2_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
-							 <&cpu2_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
+							 <&cpu2_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu2_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu2_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
 				};
 
 				map-devfreq {
@@ -133,11 +175,17 @@
 				map-cpufreq {
 					trip = <&cv1_sw_slowdown>;
 					cooling-device = <&cpu0_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu0_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu0_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu0_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu1_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu1_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu1_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu1_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu2_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
-							 <&cpu2_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
+							 <&cpu2_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu2_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu2_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
 				};
 
 				map-devfreq {
@@ -160,11 +208,17 @@
 				map-cpufreq {
 					trip = <&cv2_sw_slowdown>;
 					cooling-device = <&cpu0_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu0_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu0_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu0_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu1_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu1_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu1_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu1_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu2_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
-							 <&cpu2_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
+							 <&cpu2_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu2_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu2_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
 				};
 
 				map-devfreq {
@@ -187,11 +241,17 @@
 				map-cpufreq {
 					trip = <&soc0_sw_slowdown>;
 					cooling-device = <&cpu0_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu0_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu0_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu0_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu1_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu1_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu1_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu1_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu2_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
-							 <&cpu2_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
+							 <&cpu2_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu2_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu2_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
 				};
 
 				map-devfreq {
@@ -214,11 +274,17 @@
 				map-cpufreq {
 					trip = <&soc1_sw_slowdown>;
 					cooling-device = <&cpu0_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu0_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu0_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu0_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu1_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu1_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu1_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu1_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu2_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
-							 <&cpu2_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
+							 <&cpu2_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu2_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu2_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
 				};
 
 				map-devfreq {
@@ -241,11 +307,17 @@
 				map-cpufreq {
 					trip = <&soc2_sw_slowdown>;
 					cooling-device = <&cpu0_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu0_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu0_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu0_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu1_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu1_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu1_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu1_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
 							 <&cpu2_0 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
-							 <&cpu2_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
+							 <&cpu2_1 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu2_2 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>,
+							 <&cpu2_3 THERMAL_NO_LIMIT THERMAL_NO_LIMIT>;
 				};
 
 				map-devfreq {
