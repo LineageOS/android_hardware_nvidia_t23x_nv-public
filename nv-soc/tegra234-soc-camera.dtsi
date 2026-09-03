@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: GPL-2.0-only
-// SPDX-FileCopyrightText: Copyright (c) 2022-2025, NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
+// SPDX-FileCopyrightText: Copyright (c) 2022-2026, NVIDIA CORPORATION & AFFILIATES.  All rights reserved.
 
 /*
  * tegra234-soc-camera.dtsi: Camera RTCPU DTSI file.
@@ -41,7 +41,7 @@
 				interconnects = <&mc TEGRA234_MEMORY_CLIENT_VI2FALR &emc>,
 						<&mc TEGRA234_MEMORY_CLIENT_VI2FALW &emc>;
 				interconnect-names = "dma-mem", "write";
-				status = "okay";
+				status = "disabled";
 			};
 
 			vi1: vi1@14c00000 {
@@ -67,7 +67,7 @@
 				interconnects = <&mc TEGRA234_MEMORY_CLIENT_VIFALR &emc>,
 						<&mc TEGRA234_MEMORY_CLIENT_VIFALW &emc>;
 				interconnect-names = "dma-mem", "write";
-				status = "okay";
+				status = "disabled";
 			};
 
 			isp: isp@14800000 {
